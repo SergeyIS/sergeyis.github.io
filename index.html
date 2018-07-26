@@ -16,6 +16,7 @@
 <body>
     <div class="container">
         <div id="welcome" class="text-center align-middle h1"></div>
+        <div id="description" class="text-center textt-muted">Here will be information about my work experience, interests, projects, etc.</div>
     </div>
 <script>
     $(document).ready(function(){
@@ -25,6 +26,7 @@
         }
 
         $("#welcome").text("Welcome to " + host);
+        setColor();
     });
 
     $(document).click(setColor)
