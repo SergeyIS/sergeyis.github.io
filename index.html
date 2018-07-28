@@ -14,24 +14,95 @@
   <script src="js/script.js"></script>
 </head>
 
-<body>
-    <div class="container">
-        <div id="welcome" class="text-center align-middle h1"></div>
-        <div id="description" class="text-center textt-muted">Here will be information about my work experience, interests, projects, etc.</div>
-    </div>
-<script>
-    $(document).ready(function(){
-        host = window.location.hostname;
-        if(host === ""){
-            host = "sergeyis.github.io";
-        }
+<body class>
+    <main>
+        <nav id="side-nav" class="nav side-nav" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+            <ul>
+                <li>
+                    <a href="#about" class="scroll">About me</a>
+                </li>
+                <li>
+                    <a href="#resume" class="scroll">Resume</a>
+                </li>
+                <li>
+                    <a href="#portfolio" class="scroll">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contacts" class="scroll">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <nav id="top-nav" class="nav top-nav" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+            <ul>
+                <li>
+                    <a href="?lan=ru" class="underlineble">RU</a>
+                </li>
+                <li>
+                    <a href="?lan=en" class="underlineble" style="margin-left:5px">EN</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div id="home" class="scene-home" style="visibility: inherit; opacity: 1;">
+            <div class="content">
+                <h1 id="welcome" class="hello-title" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">Welcome to </h1>
+            </div>
+        </div>
+        
+        <div id="about" class="scene-about" style="visibility: inherit; opacity: 1;"></div>
 
-        $("#welcome").text("Welcome to " + host);
-        setColor();
-    });
+        <div id="resume" class="scene-resume" style="visibility: inherit; opacity: 1;"></div>
 
-    $(document).click(setColor)
-</script>
+        <div id="resume" class="scene-resume" style="visibility: inherit; opacity: 1;"></div>
 
+        <div id="portfolio" class="scene-portfolio" style="visibility: inherit; opacity: 1;"></div>
+
+        <div id="contacts" class="scene-contacts" style="visibility: inherit; opacity: 1;">
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container" style="min-height:100%">
+            <!-- <svg class="contacts-background"></svg> -->
+            <div class="row">
+                    <a id="contacts-title" href="#contacts" class="h1">Contact information</a>
+            </div>
+            <div class="row contacts-content">
+                <div class="col">
+                    <a href="https://www.facebook.com/profile.php?id=100005750208316" target="_blank" class="contact-entity">Facebook</a>
+                    <span class="delimiter">/</span>
+                    <a href="https://vk.com/id280531497" target="_blank" class="contact-entity">VK</a>
+                    <span class="delimiter">/</span>
+                    <a href="https://www.linkedin.com/in/sergey-ivanovich-sidorov" target="_blank" class="contact-entity">LinkedIn</a>
+                    <span class="delimiter">/</span>
+                    <a href="https://github.com/SergeyIS" target="_blank" class="contact-entity">GitHub</a>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <label class="contact-label">mail:</label>
+                        <a type="_blank" href="mailto:sergey.ivanovich.sidorov@gmail.com" target="_blank" class="contact-entity">sergey.ivanovich.sidorov@gmail.com</a>
+                    </div>
+                    <div class="row">
+                            <label class="contact-label">tel:</label>
+                            <a href="https://t.me/sergeyi5" target="_blank" class="contact-entity">+7 (985) 735 49 93</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright float-right">Here must be something about copyrights © 2018</div>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            host = window.location.hostname;
+            if(host === ""){
+                host = "sergeyis.github.io";
+            }
+
+            $("#welcome").text("Welcome to " + host);
+            $(document).click(setColor);
+        });
+    </script>
 </body>
 </html>
