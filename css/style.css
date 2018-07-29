@@ -131,7 +131,7 @@ body, html, main {
     text-decoration: none;
 }
 .smile {
-    color: #55535F;
+    color: #77746F;
 }
 .smile:hover {
     color: white;
@@ -158,6 +158,34 @@ body, html, main {
 #portfolio-title{
     color: white;
     text-decoration: none;
+}
+.github {
+    height: 50px;
+    width: 150px;
+    font-size: 3.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.github a {
+    color: #77746F;
+}
+ .github a:hover {
+    color: white;
+    text-decoration: none;
+}
+.portfolio-content {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    color: white;
+}
+
+.scene-portfolio {
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10vh;
 }
 /*Skills*/
 #skills-title{
