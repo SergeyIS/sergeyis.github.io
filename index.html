@@ -4,7 +4,7 @@
 <head>
   <meta name="description" content="Webpage description goes here" />
   <meta charset="utf-8">
-  <title>welcome</title>
+  <title>Sergey Sidorov CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="me" content="">
   <link rel="shortcut icon" href="img/code.ico"/>
@@ -14,31 +14,33 @@
   <link rel="stylesheet" href="css/animate.css"/>
   
   <script src="js/jquery-latest.min.js"></script>
+  <script src="js/localization.js"></script>
+  <script src="js/mustache.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/text-scrumble.js"></script>
 </head>
-
 <body class>
     <header>
-    <nav id="side-nav" class="nav side-nav" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+        <nav id="side-nav" class="nav side-nav" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
             <ul>
                 <li>
-                    <a href="#about" class="scroll">About me</a>
+                    <a href="#about" class="scroll">{{about_me}}</a>
                 </li>
                 <li>
-                    <a href="#experience" class="scroll">Experience</a>
+                    <a href="#experience" class="scroll">{{experience}}</a>
                 </li>
                 <li>
-                        <a href="#skills" class="scroll">Skills</a>
+                        <a href="#skills" class="scroll">{{skills}}</a>
                 </li>
                 <li>
-                        <a href="#portfolio" class="scroll">Portfolio</a>
+                        <a href="#portfolio" class="scroll">{{portfolio}}</a>
                 </li>
                 <li>
-                    <a href="#contacts" class="scroll">Contacts</a>
+                    <a href="#contacts" class="scroll">{{contacts}}</a>
                 </li>
             </ul>
         </nav>
-        
+
         <nav id="top-nav" class="nav top-nav" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
             <ul>
                 <li>
@@ -56,7 +58,7 @@
                 <!-- <h1 id="welcome" class="hello-title title" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">Welcome to </h1> -->
                 <h1 class="hello-title title typed" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
                     <p>
-                        Hello, Im  
+                        {{hello_i_am}}  
                         <span id="role"></span>
                     </p>
                 </h1>
@@ -67,7 +69,7 @@
             <div class="container" style="min-height:100%">
                 <!-- <svg class="about-background"></svg> -->
                 <div class="row">
-                    <a id="about-title" href="#about" class="h1">About me</a>
+                    <a id="about-title" href="#about" class="h1 anim-title">{{about_me}}</a>
                 </div>
                 <div class="row about-content">
                     A couple of words about me
@@ -79,14 +81,14 @@
             <div class="container" style="min-height:100%">
                 <!-- <svg class="about-background"></svg> -->
                 <div class="row">
-                    <a id="experience-title" href="#experience" class="h1">Experience</a>
+                    <a id="experience-title" href="#experience" class="h1 anim-title">{{experience}}</a>
                 </div>
                 <div class="row experience-content">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="experience-type">
-                                        <span class="pe-7s-study"></span><p>EDUCATION</p>
+                                        <span></span><p class="text-uppercase">{{education}}</p>
                                     </div>
                                     <ul class="timeline">
                                         <li>
@@ -94,51 +96,50 @@
                                                 <p>2015 - 2019</p>
                                             </div>
                                             <div class="timeline_title">
-                                                <h4>Computer Science</h4>
+                                                <h4>{{cs}}</h4>
                                             </div>
                                             <div class="about_time_period">
-                                                <p>National University of Science and Technology MISIS. 
-                                                    Department of Computer Aided Design Systems, Current GPA 4.8</p>
+                                                <p>{{edu_descr}}</p>
                                             </div>
                                         </li>
                                     </ul>               
                                 </div>
                                 <div class="col-md-6">
                                     <div class="experience-type">
-                                        <span class="pe-7s-portfolio"></span><p>WORK EXPERIENCE</p>
+                                        <span></span><p class="text-uppercase">{{work_experience}}</p>
                                     </div>
                                     <ul class="timeline no-margin">
                                         <li>
                                             <div class="time_period">
-                                                <p>2018 July.</p>
+                                                <p>2018 {{July}}.</p>
                                             </div>
                                             <div class="timeline_title">
-                                                <h4>Software Engineer</h4>
+                                                <h4>{{software_engineer}}</h4>
                                             </div>
                                             <div class="about_time_period">
-                                                <p>Deutsche Bank Technology Center. Intern</p>
+                                                <p>{{deutsche_bank_descr}}</p>
                                             </div>
                                         </li>                                
                                         <li>
                                             <div class="time_period">
-                                                <p>2018 Mar. - 2018 June</p>
+                                                <p>2018 {{Mar}}. - 2018 {{June}}</p>
                                             </div>
                                             <div class="timeline_title">
-                                                <h4>Programming Teacher</h4>
+                                                <h4>{{programming_teacher}}</h4>
                                             </div>
                                             <div class="about_time_period">
-                                                <p>Digit Center School. C # programming courses, Web technologies basics</p>
+                                                <p>{{teacher_descr}}</p>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="time_period">
-                                                <p>2018 Jan.</p>
+                                                <p>2018 {{Jan}}.</p>
                                             </div>
                                             <div class="timeline_title">
-                                                <h4>DevOps</h4>
+                                                <h4>{{devops}}</h4>
                                             </div>
                                             <div class="about_time_period">
-                                                <p>Raiffeisen Bank. Intern. Automation CI/CD</p>
+                                                <p>{{raiffeisen_descr}}</p>
                                             </div>
                                         </li>
                                         <li>
@@ -146,11 +147,10 @@
                                                 <p>2017 - 2018</p>
                                             </div>
                                             <div class="timeline_title">
-                                                <h4>System Administrator</h4>
+                                                <h4>{{sysadmin}}</h4>
                                             </div>
                                             <div class="about_time_period">
-                                                <p>National University of Science and Technology MISIS. Maintenance of operability of computer equipment, 
-                                                    university network, security provision, adjustment of computer systems.</p>
+                                                <p>{{sysadmin_descr}}</p>
                                             </div>
                                         </li>
                                     </ul>
@@ -163,22 +163,47 @@
         </div>
 
         <div id="skills" class="scene-skills scene" style="visibility: inherit; opacity: 1;">
-                <div class="container" style="min-height:100%">
-                    <!-- <svg class="about-background"></svg> -->
-                    <div class="row">
-                        <a id="skills-title" href="#skills" class="h1">Skills</a>
+            <div class="container" style="min-height:100%">
+                <!-- <svg class="about-background"></svg> -->
+                <div class="row">
+                    <a id="skills-title" href="#skills" class="h1 anim-title">{{skills}}</a>
+                </div>
+                <div class="row skills-content">
+                    <div class="col">
+                        <p class="text-uppercase">Skills</p>
+                        <ul>
+                            <li class="skill-point">Java</li>
+                            <li class="skill-point">C#</li>
+                            <li class="skill-point">ASP.NET MVC</li>
+                        </ul>
                     </div>
-                    <div class="row skills-content">
-                        My works
+                    
+                    <div class="col">
+                        <p class="text-uppercase">Languages</p>
+                        <ul>
+                            <li class="skill-point">Russian <span>native</span></li>
+                            <li class="skill-point">English <span>upper intermediate</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <p class="text-uppercase">Interests</p>
+                        <ul class="skill-set">
+                            <li class="skill-point">Software development</li>
+                            <li class="skill-point">Project management</li>
+                            <li class="skill-point">Design</li>
+                            <li class="skill-point">ML<span class="delimiter">/</span>AI</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
         
         <div id="portfolio" class="scene-portfolio scene" style="visibility: inherit; opacity: 1;">
             <div class="container" style="min-height:100%">
                 <!-- <svg class="about-background"></svg> -->
                 <div class="row">
-                    <a id="portfolio-title" href="#portfolio" class="h1">Portfolio</a>
+                    <a id="portfolio-title" href="#portfolio" class="h1 anim-title">{{portfolio}}</a>
                 </div>
                 <div class="row portfolio-content">
                     My works
@@ -190,7 +215,7 @@
             <div class="container" style="min-height:100%">
                 <!-- <svg class="contacts-background"></svg> -->
                 <div class="row">
-                        <a id="contacts-title" href="#contacts" class="h1">Contact information</a>
+                        <a id="contacts-title" href="#contacts" class="h1 anim-title">{{contact_information}}</a>
                 </div>
                 <div class="row contacts-content">
                     <div class="col">
@@ -214,24 +239,34 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright float-right">Here must be something about copyrights © 2018</div>
+            <div class="copyright float-right">{{copyright_descr}}</div>
         </div>
     </main>
 
-    
     <script src="js/typed.min.js"></script>
     <script>
         $(document).ready(function(){
-            host = window.location.hostname;
-            if(host === ""){
-                host = "sergeyis.github.io";
-            }
-
-            $("#welcome").text("Welcome to " + host);
+            lan = getLocalization();
+            dictiionary = loadDictionary(lan);
+            //rendering
+            
+            $("header").html(Mustache.render($("header").html(), dictionary));
+            $("main").html(Mustache.render($("main").html(), dictionary));
             $(".typed").mouseenter(runTypedAnimation);
-            //animateWelcomeTitle();
             runTypedAnimation();
+            
+            $(".anim-title").each(function() {
+                $(this).mouseenter(function() {
+                    if(this.running === undefined || this.running === false){
+                        this.running = true;
+                        fx = new TextScramble(this);
+                        fx.setText($(this).text()).then(()=>this.running = false);
+                    }
+                });
+            });
         });
+
+        
     </script>
 </body>
 </html>
