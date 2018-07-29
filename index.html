@@ -72,7 +72,17 @@
                     <a id="about-title" href="#about" class="h1 anim-title">{{about_me}}</a>
                 </div>
                 <div class="row about-content">
-                    A couple of words about me
+                    <div class="col">
+                        <p>
+                            A couple of words about me: 
+                            I am a fourth yaer student at National University of Science and Technology MISIS living in Moscow.
+                            This web site describes my personal experience, projects and interests. 
+                            Here you can find my contacts if you want to <a href="#contacts">touch with me</a> for some suggestions & collaborations.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p style="font-size: 80px; margin-left:30%"><span class="smile">: )</span></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -252,7 +262,12 @@
             
             $("header").html(Mustache.render($("header").html(), dictionary));
             $("main").html(Mustache.render($("main").html(), dictionary));
-            $(".typed").mouseenter(runTypedAnimation);
+            $(".typed").mouseenter(function(){
+                if(this.running === undefined || this.running === false){
+                    this.running = true;
+                    runTypedAnimation().than(() => this.running = false);
+                }
+            });
             runTypedAnimation();
             
             $(".anim-title").each(function() {
@@ -260,7 +275,7 @@
                     if(this.running === undefined || this.running === false){
                         this.running = true;
                         fx = new TextScramble(this);
-                        fx.setText($(this).text()).then(()=>this.running = false);
+                        fx.setText($(this).text()).then(() => this.running = false);
                     }
                 });
             });

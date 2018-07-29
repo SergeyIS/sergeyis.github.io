@@ -118,6 +118,23 @@ body, html, main {
 .about-content{
     padding-top: 10%;
     padding-bottom: 10%;
+    color: white;
+}
+
+.about-content a {
+    color: white;
+    text-decoration: underline;
+}
+
+.about-content a:hover {
+    color: white;
+    text-decoration: none;
+}
+.smile {
+    color: #55535F;
+}
+.smile:hover {
+    color: white;
 }
 
 /*Experience*/
