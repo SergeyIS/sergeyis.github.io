@@ -2,8 +2,8 @@ body, html, main {
     height: 100%;
     background: 0 0;
     display: block;
-    /* background-color: #44435F; */
-    background-color: red;
+    background-color: #44435F;
+    /* background-color: red; */
     font-family: "Neue Helvetica W01",Arial,sans-serif;
 }
 
@@ -156,6 +156,9 @@ body, html, main {
     font-size: 1em;
 }
 /*Portfolio*/
+#portfolio-content-mobile{
+    display: none;
+}
 #portfolio-title{
     color: white;
     text-decoration: none;

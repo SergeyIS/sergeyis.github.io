@@ -71,8 +71,8 @@
                 </h1>
             </div>
 
-            <a href="#about" class="startScroll" data-offset="half" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
-                <p>Let's start</p>
+            <a href="#about" class="startScroll" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                <p style="text-align: center">Let's start</p>
                 <img class="icon" src="img/arrow_white.svg"></img> 
             </a>
         </div>
@@ -226,7 +226,7 @@
                 <div class="row">
                     <a id="portfolio-title" href="#portfolio" class="h1 anim-title">{{portfolio}}</a>
                 </div>
-                <div class="row portfolio-content">
+                <div id="portfolio-content" class="row portfolio-content">
                     <div class="col-8">
                             <div class="row">
                                     <div class="col-2">
@@ -291,8 +291,69 @@
                     <div class="col-1">
                         <div class="github"><a href="https://github.com/SergeyIS">GitHub</a></div>
                     </div>
+                
+                
+                
+                
+                
                 </div>
                 
+                <div id="portfolio-content-mobile" class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row"><p>Education manager</p></div>
+                                <div class="row">
+                                    <p>
+                                        Web platform for managing of learning process in schools. <br/>Stack: 
+                                        <span class="technology">C#</span>
+                                        <span class="delimiter">/</span>
+                                        <span class="technology">ASP.NET MVC</span>
+                                        <span class="delimiter">/</span>
+                                        <span class="technology">SQL Server</span>
+                                        <span class="delimiter">/</span>
+                                        <span class="technology">Web (JQuery, D3.js, HTML/CSS)</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="row"><p>SafeMoney web service</p></div>
+                                <div class="row">
+                                    <p>
+                                        Application that allow you to control your debts and make money transfers using application. <br/>Stack: 
+                                        <span class="technology">C#</span>
+                                        <span class="delimiter">/</span>
+                                        <span class="technology">ASP.NET Web API</span>
+                                        <span class="delimiter">/</span>
+                                        <span class="technology">SQL Server</span>
+                                        <span class="delimiter">/</span>
+                                        <span class="technology">Social services integration</span>
+                                        <span class="delimiter">/</span>
+                                        <span class="technology">AngularJS</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="row"><p>Mobile</p></div>
+                                <div class="row">
+                                    <p>
+                                        Mobile Application for SafeMoney REST service. <br/>Stack: 
+                                        <span class="technology">Java</span>
+                                        <span class="delimiter">/</span>
+                                        <span class="technology">Android SDK</span>
+                                        <span class="delimiter">/</span>
+                                        <span class="technology">SQL-Lite</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -305,21 +366,21 @@
                 <div class="row contacts-content">
                     <div class="col">
                         <a href="https://www.facebook.com/profile.php?id=100005750208316" target="_blank" class="contact-entity">Facebook</a>
-                        <span class="delimiter">/</span>
+                        <span class="contacts-delimiter">/</span>
                         <a href="https://vk.com/id280531497" target="_blank" class="contact-entity">VK</a>
-                        <span class="delimiter">/</span>
+                        <span class="contacts-delimiter">/</span>
                         <a href="https://www.linkedin.com/in/sergey-ivanovich-sidorov" target="_blank" class="contact-entity">LinkedIn</a>
-                        <span class="delimiter">/</span>
+                        <span class="contacts-delimiter">/</span>
                         <a href="https://github.com/SergeyIS" target="_blank" class="contact-entity">GitHub</a>
                     </div>
                     <div class="col">
-                        <div class="row">
-                            <label class="contact-label">mail:</label>
-                            <a type="_blank" href="mailto:sergey.ivanovich.sidorov@gmail.com" target="_blank" class="contact-entity">sergey.ivanovich.sidorov@gmail.com</a>
+                        <div class="row"> 
+                            <label class="contact-label">mail: </label>
+                            <a type="_blank" href="mailto:sergey.ivanovich.sidorov@gmail.com" target="_blank" class="contact-entity" style="display: inline-block">sergey.ivanovich.sidorov@gmail.com</a>
                         </div>
                         <div class="row">
-                                <label class="contact-label">tel:</label>
-                                <a href="https://t.me/sergeyi5" target="_blank" class="contact-entity">+7 (985) 735 49 93</a>
+                            <label class="contact-label">tel:</label>
+                            <a href="https://t.me/sergeyi5" target="_blank" class="contact-entity" style="display: inline-block">+7 (985) 735 49 93</a>
                         </div>
                     </div>
                 </div>
@@ -352,9 +413,7 @@
                     }
                 });
             });
-        });
-
-        
+        });        
     </script>
 </body>
 </html>
