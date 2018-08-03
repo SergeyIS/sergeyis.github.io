@@ -58,6 +58,47 @@
                 </li>
             </ul>
         </nav>
+
+        <div id="menu" class="invisible">
+            <ul>
+                <li class="mainpoint">
+                    <a href="#home" class="menu-link">Home</a>
+                    <ul class="underpoint">
+                        <a href="#home" class="menu-link">Let's start</a>
+                    </ul>
+                </li>
+                <li class="mainpoint">
+                    <a href="#about" class="menu-link">{{about_me}}</a>
+                    <ul class="underpoint">
+                        <li><a href="#about" class="menu-link">Who I am</a></li>
+                    </ul>
+                </li>
+                <li class="mainpoint">
+                    <a href="#experience" class="menu-link">{{experience}}</a>
+                    <ul class="underpoint">
+                        <li><a href="#experience" class="menu-link">Resume</a></li>
+                    </ul>
+                </li>
+                <li class="mainpoint">
+                    <a href="#skills" class="menu-link">{{skills}}</a>
+                    <ul class="underpoint">
+                        <li><a href="#skills" class="menu-link">{{skills}}</a></li>
+                    </ul>
+                </li>
+                <li class="mainpoint">
+                    <a href="#portfolio" class="menu-link">{{portfolio}}</a>
+                    <ul class="underpoint">
+                        <li><a href="#portfolio" class="menu-link">{{portfolio}}</a></li>
+                    </ul>
+                </li>
+                <li class="mainpoint">
+                    <a href="#contacts" class="menu-link">{{contacts}}</a>
+                    <ul class="underpoint">
+                        <li><a href="#contacts" class="menu-link">{{contacts}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
         <div id="home" class="scene-home" style="visibility: inherit; opacity: 1;">
@@ -71,7 +112,7 @@
                 </h1>
             </div>
 
-            <a href="#about" class="startScroll" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+            <a href="#about" class="startScroll">
                 <p style="text-align: center">Let's start</p>
                 <img class="icon" src="img/arrow_white.svg"></img> 
             </a>
@@ -413,7 +454,38 @@
                     }
                 });
             });
-        });        
+            
+            window.onscroll = function() {
+                if(window.pageYOffset > window.innerHeight/2) {
+                    $(".startScroll").removeClass("visible");
+                    $(".startScroll").addClass("invisible");
+                } else{
+                    $(".startScroll").removeClass("invisible");
+                    $(".startScroll").addClass("visible");
+                }
+            }
+
+            $(".burger").click(function() {
+                if($(".burger").hasClass("close")) {
+                    $(".burger").removeClass("close");
+                    $("#menu").removeClass("visible");
+                    $("#menu").addClass("invisible");
+                } else {
+                    $(".burger").addClass("close");
+                    $("#menu").removeClass("invisible");
+                    $("#menu").addClass("visible");
+                }
+            });
+
+            $(".menu-link").each(function() {
+                $(this).click(function() {
+                    $(".burger").removeClass("close");
+                    $("#menu").removeClass("visible");
+                    $("#menu").addClass("invisible");
+                });
+            });
+
+        });
     </script>
 </body>
 </html>

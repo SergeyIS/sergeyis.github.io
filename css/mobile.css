@@ -26,6 +26,84 @@ body, html, main {
     display: none;
 }
 
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #1c1c1c;
+    flex-direction: column;
+    text-align: left;
+    z-index: 1000;
+    color: #fff;
+    font-size: 1.5em;
+    padding-top: 15%;
+    overflow-y: scroll;
+    transition: .5s;
+}
+
+.mainpoint a {
+    text-decoration: none;
+    color: #fff;
+}
+.mainpoint a:hover {
+    text-decoration: none;
+    color: #565656;
+}
+
+.mainpoint {
+    margin-top: 20px;
+}
+.underpoint{
+    font-size: 0.7em;
+    color: #565656;
+    text-align: left;
+    padding-left: 0;
+}
+.underpoint a{
+    font-size: 1em;
+    color: #565656;
+}
+.underpoint a:before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: #565656;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    transition: all .4s ease;
+}
+.close span {
+    width:23px;
+    height:1px;
+    background:rgba(255,255,255,.5) !important;
+    transform:rotate(45deg);
+    display:block;
+    position:absolute;
+    top:29px
+}
+.close span:first-child {
+    transform:rotate(-45deg);
+}
+.close span:nth-child(2) {
+    opacity:0;
+}
+.close:hover span {
+    background:#fff !important;
+}
+
 /*About*/
 #about{
     padding-top: 20%;
