@@ -8,11 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="me" content="">
   <link rel="shortcut icon" href="img/code.ico"/>
-  <link rel="stylesheet" type="text/css" media="(max-width:600px)" href="css/mobile.css" />
-  <link rel="stylesheet" type="text/css" media="(min-width:600px) and (max-width:1350px)" href="css/tablet.css" />
-  <link rel="stylesheet" type="text/css" media="(min-width:1350px)" href="css/desctop.css" />
+  <link rel="stylesheet" type="text/css" media="(max-width:1100px)" href="css/mobile.css" />
+  <link rel="stylesheet" type="text/css" media="(min-width:1100px)" href="css/desctop.css" />
   
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/lnr-icon.css">
   <link rel="stylesheet" href="css/animate.css"/>
   
@@ -60,23 +59,33 @@
         </nav>
 
         <div id="menu" class="invisible">
+            <nav id="top-nav-menu" class="nav top-nav" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                <ul>
+                    <li>
+                        <a href="?lan=ru" class="underlineble">RU</a>
+                    </li>
+                    <li>
+                        <a href="?lan=en" class="underlineble" style="margin-left:5px">EN</a>
+                    </li>
+                </ul>
+            </nav>
             <ul>
                 <li class="mainpoint">
                     <a href="#home" class="menu-link">Home</a>
                     <ul class="underpoint">
-                        <a href="#home" class="menu-link">Let's start</a>
+                        <a href="#home" class="menu-link">{{lets_start}}</a>
                     </ul>
                 </li>
                 <li class="mainpoint">
                     <a href="#about" class="menu-link">{{about_me}}</a>
                     <ul class="underpoint">
-                        <li><a href="#about" class="menu-link">Who I am</a></li>
+                        <li><a href="#about" class="menu-link">{{who_i_am}}</a></li>
                     </ul>
                 </li>
                 <li class="mainpoint">
                     <a href="#experience" class="menu-link">{{experience}}</a>
                     <ul class="underpoint">
-                        <li><a href="#experience" class="menu-link">Resume</a></li>
+                        <li><a href="#experience" class="menu-link">{{resume}}</a></li>
                     </ul>
                 </li>
                 <li class="mainpoint">
@@ -105,15 +114,15 @@
             <div class="content">
                 <h1 class="hello-title title typed" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
                     <p>
-                        Hello,
-                        <span></br> I am </span>
+                        {{hello}},
+                        <span></br> {{i_am}} </span>
                         <span id="role"></span>
                     </p>                    
                 </h1>
             </div>
 
             <a href="#about" class="startScroll">
-                <p style="text-align: center">Let's start</p>
+                <p style="text-align: center">{{lets_start}}</p>
                 <img class="icon" src="img/arrow_white.svg"></img> 
             </a>
         </div>
@@ -127,9 +136,7 @@
                 <div class="row about-content">
                     <div class="col">
                         <p>
-                            I am a fourth-year student at National University of Science and Technology MISIS living in Moscow.
-                            This web site describes my personal experience, projects and interests. 
-                            Here you can find my contacts if you want to <a href="#contacts">touch with me</a> for some suggestions & collaborations.
+                            {{my_descr}} <a href="#contacts">{{touch_with_me}}</a> {{for_suggestions_collaborations}}
                         </p>
                     </div>
                     <div class="col smile">
@@ -173,7 +180,7 @@
                                     <ul class="timeline no-margin">
                                         <li>
                                             <div class="time_period">
-                                                <p>2018 {{July}}.</p>
+                                                <p>2018 {{July}}. - {{now}}</p>
                                             </div>
                                             <div class="timeline_title">
                                                 <h4>{{software_engineer}}</h4>
@@ -232,7 +239,7 @@
                 </div>
                 <div class="row skills-content">
                     <div class="col">
-                        <p class="text-uppercase">Skills</p>
+                        <p class="text-uppercase">{{skills}}</p>
                         <ul>
                             <li class="skill-point">Java</li>
                             <li class="skill-point">C#</li>
@@ -241,19 +248,19 @@
                     </div>
                     
                     <div class="col">
-                        <p class="text-uppercase">Languages</p>
+                        <p class="text-uppercase">{{languages}}</p>
                         <ul>
-                            <li class="skill-point">Russian <span>native</span></li>
-                            <li class="skill-point">English <span>upper intermediate</span></li>
+                            <li class="skill-point">{{russian}} <span>{{native}}</span></li>
+                            <li class="skill-point">{{english}} <span>{{upper_intermediate}}</span></li>
                         </ul>
                     </div>
 
                     <div class="col">
-                        <p class="text-uppercase">Interests</p>
+                        <p class="text-uppercase">{{interests}}</p>
                         <ul class="skill-set">
-                            <li class="skill-point">Software development</li>
-                            <li class="skill-point">Project management</li>
-                            <li class="skill-point">Design</li>
+                            <li class="skill-point">{{software_development}}</li>
+                            <li class="skill-point">{{project_management}}</li>
+                            <li class="skill-point">{{design}}</li>
                             <li class="skill-point">ML<span class="delimiter">/</span>AI</li>
                         </ul>
                     </div>
@@ -266,79 +273,7 @@
                 <!-- <svg class="about-background"></svg> -->
                 <div class="row">
                     <a id="portfolio-title" href="#portfolio" class="h1 anim-title">{{portfolio}}</a>
-                </div>
-                <div id="portfolio-content" class="row portfolio-content">
-                    <div class="col-8">
-                            <div class="row">
-                                    <div class="col-2">
-                                        <div class="row"><p>Education manager</p></div>
-                                    </div>
-                                    <div class="col-5">
-                                        <div class="row">
-                                            <p>
-                                                Web platform for managing of learning process in schools. <br/>Stack: 
-                                                <span class="technology">C#</span>
-                                                <span class="delimiter">/</span>
-                                                <span class="technology">ASP.NET MVC</span>
-                                                <span class="delimiter">/</span>
-                                                <span class="technology">SQL Server</span>
-                                                <span class="delimiter">/</span>
-                                                <span class="technology">Web (JQuery, D3.js, HTML/CSS)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="row"><p>SafeMoney web service</p></div>
-                                    </div>
-                                    <div class="col-5">
-                                        <div class="row">
-                                            <p>
-                                                Application that allow you to control your debts and make money transfers using application. <br/>Stack: 
-                                                <span class="technology">C#</span>
-                                                <span class="delimiter">/</span>
-                                                <span class="technology">ASP.NET Web API</span>
-                                                <span class="delimiter">/</span>
-                                                <span class="technology">SQL Server</span>
-                                                <span class="delimiter">/</span>
-                                                <span class="technology">Social services integration</span>
-                                                <span class="delimiter">/</span>
-                                                <span class="technology">AngularJS</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="row">
-                                            <p>Mobile</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <div class="row">
-                                            <p>
-                                                Mobile Application for SafeMoney REST service. <br/>Stack: 
-                                                <span class="technology">Java</span>
-                                                <span class="delimiter">/</span>
-                                                <span class="technology">Android SDK</span>
-                                                <span class="delimiter">/</span>
-                                                <span class="technology">SQL-Lite</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                    </div>
-                    <div class="col-1">
-                        <div class="github"><a href="https://github.com/SergeyIS">GitHub</a></div>
-                    </div>
-                
-                
-                
-                
-                
-                </div>
-                
+                </div>                
                 <div id="portfolio-content-mobile" class="row">
                     <div class="col">
                         <div class="row">
@@ -346,7 +281,7 @@
                                 <div class="row"><p>Education manager</p></div>
                                 <div class="row">
                                     <p>
-                                        Web platform for managing of learning process in schools. <br/>Stack: 
+                                        {{edu_man_descr}} <br/>Stack: 
                                         <span class="technology">C#</span>
                                         <span class="delimiter">/</span>
                                         <span class="technology">ASP.NET MVC</span>
@@ -363,7 +298,7 @@
                                 <div class="row"><p>SafeMoney web service</p></div>
                                 <div class="row">
                                     <p>
-                                        Application that allow you to control your debts and make money transfers using application. <br/>Stack: 
+                                        {{sm_api_descr}} <br/>Stack: 
                                         <span class="technology">C#</span>
                                         <span class="delimiter">/</span>
                                         <span class="technology">ASP.NET Web API</span>
@@ -382,7 +317,7 @@
                                 <div class="row"><p>Mobile</p></div>
                                 <div class="row">
                                     <p>
-                                        Mobile Application for SafeMoney REST service. <br/>Stack: 
+                                        {{sm_mob_descr}} <br/>Stack: 
                                         <span class="technology">Java</span>
                                         <span class="delimiter">/</span>
                                         <span class="technology">Android SDK</span>
@@ -484,6 +419,7 @@
                     $("#menu").addClass("invisible");
                 });
             });
+
 
         });
     </script>

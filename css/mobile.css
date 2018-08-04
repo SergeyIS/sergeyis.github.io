@@ -26,6 +26,28 @@ body, html, main {
     display: none;
 }
 
+#top-nav-menu {
+    right:5%;
+    margin-top: -10%;
+    height:100%;
+    align-items:right;
+    visibility:hidden;
+    z-index:100;
+    font-size: 0.8em;;
+}
+#top-nav-menu ul li{
+    display: inline-block;
+}
+
+#top-nav-menu a {
+    display: inline-block;
+    color:white;
+    line-height: 1;
+    text-decoration:none;
+    cursor: pointer;
+    position:relative;
+}
+
 .invisible {
     opacity: 0;
     visibility: hidden;
@@ -457,8 +479,6 @@ body, html, main {
 .startScroll img{
     margin-left: 25px;
 }
-
-
 
 .icon {
     width: 50px;

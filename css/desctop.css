@@ -1,3 +1,6 @@
+#menu {
+    display: none;
+}
 body, html, main {
     height: 100%;
     background: 0 0;
@@ -157,11 +160,12 @@ body, html, main {
 }
 /*Portfolio*/
 #portfolio-content-mobile{
-    display: none;
+    color: white;
 }
 #portfolio-title{
     color: white;
     text-decoration: none;
+    margin-bottom: 5%;
 }
 .github {
     height: 50px;
