@@ -1,0 +1,494 @@
+body, html, main {
+    height: 100%;
+    background: 0 0;
+    display: block;
+    background-color: #44435F;
+    /* background-color: green; */
+    font-family: "Neue Helvetica W01",Arial,sans-serif;
+}
+
+/*Navigation*/
+.nav {
+    position:fixed;
+    display:flex;
+    color: white;
+    font-size: 16px;
+}
+.nav ol, ul {
+    list-style: none;
+}
+#side-nav {
+    display: none;
+}
+
+
+#top-nav {
+    display: none;
+}
+
+#top-nav-menu {
+    right:5%;
+    margin-top: -10%;
+    height:100%;
+    align-items:right;
+    visibility:hidden;
+    z-index:100;
+    font-size: 0.8em;;
+}
+#top-nav-menu ul li{
+    display: inline-block;
+}
+
+#top-nav-menu a {
+    display: inline-block;
+    color:white;
+    line-height: 1;
+    text-decoration:none;
+    cursor: pointer;
+    position:relative;
+}
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #1c1c1c;
+    flex-direction: column;
+    text-align: left;
+    z-index: 1000;
+    color: #fff;
+    font-size: 1.5em;
+    padding-top: 15%;
+    overflow-y: scroll;
+    transition: .5s;
+}
+
+.mainpoint a {
+    text-decoration: none;
+    color: #fff;
+}
+.mainpoint a:hover {
+    text-decoration: none;
+    color: #565656;
+}
+
+.mainpoint {
+    margin-top: 20px;
+}
+.underpoint{
+    font-size: 0.7em;
+    color: #565656;
+    text-align: left;
+    padding-left: 0;
+}
+.underpoint a{
+    font-size: 1em;
+    color: #565656;
+}
+.underpoint a:before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: #565656;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    transition: all .4s ease;
+}
+.close span {
+    width:23px;
+    height:1px;
+    background:rgba(255,255,255,.5) !important;
+    transform:rotate(45deg);
+    display:block;
+    position:absolute;
+    top:29px
+}
+.close span:first-child {
+    transform:rotate(-45deg);
+}
+.close span:nth-child(2) {
+    opacity:0;
+}
+.close:hover span {
+    background:#fff !important;
+}
+
+/*About*/
+#about{
+    padding-top: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#about-title {
+    color: white;
+    text-decoration: none;
+}
+.about-content{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    color: white;
+}
+
+.about-content a {
+    color: white;
+    text-decoration: underline;
+}
+
+.about-content a:hover {
+    color: white;
+    text-decoration: none;
+}
+.smile{
+    display: none;
+}
+
+/*Experience*/
+#experience {
+    padding-top: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#experience-title {
+    color: white;
+    text-decoration: none;
+}
+.experience-content {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: white;
+}
+.experience-type {
+    margin-top: 20px;
+    color: white;
+    font-size: 1em;
+}
+/*Portfolio*/
+#portfolio {
+    padding-top:20%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#portfolio-title{
+    color: white;
+    text-decoration: none;
+}
+.github {
+    display: none;
+}
+
+.github a {
+    color: #77746F;
+}
+ .github a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#portfolio-content {
+    display: none;
+}
+
+#portfolio-content-mobile{
+    color: white;
+}
+.scene-portfolio {
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+/*Skills*/
+#skills {
+    padding-top: 20%;
+    padding-left:20px;
+    padding-right: 20px;
+}
+#skills-title{
+    color: white;
+    text-decoration: none;
+}
+.skills-content div {
+    display: block;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: white;
+}
+
+.skill-point {
+    margin-bottom: 20px;
+}
+.skill-point:before{
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 1px;
+    width: 24px;
+    margin-top: 12px;
+    background: #fff;
+}
+.skill-point:hover:before{
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 1px;
+    width: 30px;
+    background: #fff;
+}
+
+/*Content*/
+.content {
+    /* box-sizing: border-box;
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 50px; */
+    width: 100%;
+    margin: 15px;
+}
+
+
+.hello-title {
+    /* position: relative; */
+    /* line-height: 1em; */
+    color: #fff;
+    text-align: left;
+    font-size: 2.5em;
+    /* white-space: nowrap; */
+    visibility: hidden;
+    transform: translateY(-20px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.hello-title span{
+    font-size: 0.5em;
+}
+.scene-home {
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.underlineble:after {
+    background-color: white;
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    left:50%;
+    position:absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    transform:translateX(-50%);
+}
+
+.underlineble:hover:after,
+.underlineble:focus:after {
+    width: 100%;
+}
+
+/* Contacts */
+#contacts {
+    padding-top: 20%;
+    padding-left:20px;
+    padding-right: 20px;
+}
+#contacts-title{
+    color: white;
+    text-decoration: none;
+}
+
+.contact-entity {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+}
+.contact-entity:hover {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-label {
+    color: white;
+    margin-right: 5px;
+}
+.contacts-delimiter {
+    display: none;
+}
+
+.contacts-content{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.copyright {
+    color: #D3D4D7;
+    margin-bottom: 1%;
+    margin-right: 1%;
+}
+.scene {
+    min-height: 100%;
+    height: 100%;
+    background: 0 0;
+    display: block;
+    padding-top: 5%;
+}
+
+/*SHIT*/
+
+.resume_are_title {
+    background: #f3f3f3;
+    padding: 10px 20px;
+}
+
+.timeline {
+    padding-top: 47px;
+    position: relative;
+}
+
+.time_period {
+    padding-bottom: 6px;
+}
+.timeline_title {
+    padding-bottom: 19px;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    height: calc(100% - 52px);
+    width: 1px;
+    background: #d1d1d1;
+    bottom: 0;
+    left: 8px;
+}
+.timeline li:before {
+    content: "";
+    left: 0;
+    border-radius: 50%;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background: #fff;
+}
+
+/*Utils*/
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+/* Burger */
+.burger {
+    display:block;
+    width:23px;
+    position:fixed;
+    padding:19px 16px;
+    z-index:1100;
+    visibility:hidden;
+    transform:translateY(-15px)
+}
+
+.burger span {
+    width:23px;
+    height:1px;
+    display:block;
+    background:rgba(255,255,255,.5);
+    margin-bottom:7px;
+    transition:all .4s ease
+}
+.burger span:last-child {
+    margin-bottom:0
+}
+.burger:hover span {
+    background:#fff
+}
+.burger.close span {
+    width:23px;
+    height:1px;
+    background:rgba(255,255,255,.5) !important;
+    transform:rotate(45deg);
+    display:block;
+    position:absolute;
+    top:29px
+}
+.burger.close span:first-child {
+    transform:rotate(-45deg)
+}
+.burger.close span:nth-child(2) {
+    opacity:0
+}
+.burger.close:hover span {
+    background:#fff !important
+}
+.burger.alt span, .burger.alt:hover span {
+    background:#000
+}
+
+/* Scroll promt */
+.startScroll {
+    position: fixed;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    bottom: 10px;
+    left: calc(50% - 50px);
+
+    color: white;
+}
+.startScroll:hover {
+    text-decoration: none;
+    color: white;
+}
+.startScroll img{
+    margin-left: 25px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.5);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.icon:hover {
+    background-color: rgba(0,0,0,0);
+}
